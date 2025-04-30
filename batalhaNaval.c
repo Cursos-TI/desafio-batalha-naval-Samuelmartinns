@@ -63,14 +63,15 @@ int d=0 , d1=0;
       for(int i=0;i<3;i++){tabu [i+i1] [i+i1]=3;} 
       for(int i=0;i<3;i++){tabu [1+i] [9-i]=3;}
         
-      
+      int j;
       printf("    A  B  C  D  E  F  G  H  I  J\n");
       
        for(i=0;i<10;i++) {
-d1++;
-    printf("\n%d.  %d  %d  %d  %d  %d  %d  %d  %d  %d  %d",d, tabu[i][0],tabu[i][1],tabu[i][2],tabu[i][3],tabu[i][4],tabu[i][5],tabu[i][6],tabu[i][7],tabu[i][8],tabu[i][9]);
-      
-     
+d1++; printf("%d.",d1);
+for(j=0;j<10;j++){
+    printf("  %d", tabu[i][j]);
+}
+     printf("\n");
       }
   
     
@@ -102,6 +103,47 @@ d1++;
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
+
+    #define pp 10
+    int coluna2, ii;
+      int tabu2 [g][g];
+      
+        for(int ii=0;ii<pp;ii++){
+            for( coluna2=0;coluna2<pp;coluna2++){  tabu2 [ii][coluna2]=d;
+            }
+      }
+      int i2=0, c2=4 , d2=0;
+      
+      
+        //cruz
+      for(int coluna2=0;coluna2<5;coluna2++){tabu2 [7] [coluna2+1]=1;}
+      for(int ii=0;ii<3;ii++){tabu2 [ii+5] [coluna2+3]=1;}
+     //octaedro
+     for(int ii=0;ii<3;ii++){tabu2 [ii+4] [coluna2+8]=1;}
+     for(int coluna2=0;coluna2<3;coluna2++){tabu2 [6] [coluna2+7]=1;}
+//cone
+for(int coluna2=0;coluna2<1;coluna2++){tabu2 [1] [coluna2+6]=1;}
+for(int coluna2=0;coluna2<3;coluna2++){tabu2 [2] [coluna2+5]=1;}
+for(int coluna2=0;coluna2<5;coluna2++){tabu2 [3] [coluna2+4]=1;}
+      
+
+    
+        
+      int j2 ;
+      printf("\n tabuleiro 2\n");
+      printf("    A  B  C  D  E  F  G  H  I  J\n");
+      
+       for(ii=0;ii<10;ii++) {
+d2++; printf("%d.",d2);
+for(j2=0;j2<10;j2++){
+    printf("  %d", tabu2[ii][j2]);
+}
+     printf("\n");
+      }
+
+
+
+
 
     return 0;
 }
