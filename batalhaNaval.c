@@ -13,7 +13,7 @@ int main() {
 
 
     //int i;
-//int d =0;
+int d=0 , d1=0;
     //int m[10][10] = {
        // {  0  ,0  ,0  ,0  ,7  ,7  ,7  ,0  ,0  ,0  },
     //    {  0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  },
@@ -46,18 +46,33 @@ int main() {
 
 
     #define g 10
-    
-    int tabuleiro [g][g]; 
-
+    int coluna, i;
+      int tabu [g][g];
+      
         for(int i=0;i<g;i++){
-            for(int c=0;c<g;c++){
+            for( coluna=0;coluna<g;coluna++){  tabu [i][coluna]=d;
             }
       }
-      int tabuleiro ; // peças do primeiro desafio
-      for(int i=0;i<g;i++){
-        for(int c=0;c<g;c++){
-        }
-  }
+      int i1=0, c1=4 ;
+      
+      
+        
+      for(int coluna=0;coluna<3;coluna++){tabu [9] [coluna+1]=3;}
+      for(int i=0;i<3;i++){tabu [i+1] [4]=3;}
+     
+      for(int i=0;i<3;i++){tabu [i+i1] [i+i1]=3;} 
+      for(int i=0;i<3;i++){tabu [1+i] [9-i]=3;}
+        
+      
+      printf("    A  B  C  D  E  F  G  H  I  J\n");
+      
+       for(i=0;i<10;i++) {
+d1++;
+    printf("\n%d.  %d  %d  %d  %d  %d  %d  %d  %d  %d  %d",d, tabu[i][0],tabu[i][1],tabu[i][2],tabu[i][3],tabu[i][4],tabu[i][5],tabu[i][6],tabu[i][7],tabu[i][8],tabu[i][9]);
+      
+     
+      }
+  
     
 
 
